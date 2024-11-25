@@ -11,7 +11,7 @@ import SwiftUI
 struct LiveActivityApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CounterView()
         }
     }
 }
