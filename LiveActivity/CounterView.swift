@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  CounterView.swift
 //  LiveActivity
 //
-//  Created by Augusto Monteiro on 25/11/24.
+//  Created by Augusto Monteiro on 22/11/24.
 //
 
 import SwiftUI
@@ -16,6 +16,11 @@ struct CounterView: View {
             HStack {
                 minusButton
                 plusButton
+            }
+            if viewModel.canStartLiveActivity {
+                startActivityButton
+            } else {
+                endActivityButton
             }
         }
     }
@@ -39,6 +44,22 @@ struct CounterView: View {
             Image(systemName: "plus.circle.fill")
                 .font(.largeTitle)
                 .foregroundStyle(.green)
+        }
+    }
+
+    private var startActivityButton: some View {
+        Button {
+            viewModel.startActivity()
+        } label: {
+            Text("Start Live Activity")
+        }
+    }
+    
+    private var endActivityButton: some View {
+        Button {
+            viewModel.endActivity()
+        } label: {
+            Text("End Live Activity")
         }
     }
 }
