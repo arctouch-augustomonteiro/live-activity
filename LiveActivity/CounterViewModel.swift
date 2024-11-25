@@ -14,6 +14,7 @@ class CounterViewModel: ObservableObject {
     @Published private var activity: Activity<CounterAttributes>?
     @Published private(set) var count: Int = 0
 
+    private let liveActivitySharedState = CounterAttributesSharedState.shared
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
@@ -22,6 +23,22 @@ class CounterViewModel: ObservableObject {
             .dropFirst()
             .sink { [weak self] _ in
                 self?.updateActivity()
+            }
+            .store(in: &cancellables)
+        
+        liveActivitySharedState.$didTapAddButton
+            .receive(on: DispatchQueue.main)
+            .dropFirst()
+            .sink { [weak self] _ in
+                self?.add()
+            }
+            .store(in: &cancellables)
+
+        liveActivitySharedState.$didTapSubtractButton
+            .receive(on: DispatchQueue.main)
+            .dropFirst()
+            .sink { [weak self] value in
+                self?.subtract()
             }
             .store(in: &cancellables)
     }

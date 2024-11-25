@@ -75,9 +75,7 @@ struct LiveActivityView: View {
     }
     
     private var minusButton: some View {
-        Button {
-            // Add action
-        } label: {
+        Button(intent: CounterSubtractAppIntent()) {
             Image(systemName: "minus.circle.fill")
                 .font(.largeTitle)
                 .foregroundStyle(.red)
@@ -86,9 +84,7 @@ struct LiveActivityView: View {
     }
     
     private var plusButton: some View {
-        Button {
-            // Add action
-        } label: {
+        Button(intent: CounterAddAppIntent()) {
             Image(systemName: "plus.circle.fill")
                 .font(.largeTitle)
                 .foregroundStyle(.green)

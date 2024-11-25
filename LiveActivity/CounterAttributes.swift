@@ -17,3 +17,11 @@ struct CounterAttributes: ActivityAttributes {
     // Static properties
     let session: String
 }
+
+public final class CounterAttributesSharedState: ObservableObject {
+    public static let shared = CounterAttributesSharedState()
+    private init() { }
+
+    @Published public var didTapAddButton = false
+    @Published public var didTapSubtractButton = false
+}

@@ -58,12 +58,20 @@
 			);
 			target = B41B0CF72CF54043005A9AFC /* CounterWidgetExtension */;
 		};
+		B41B0D172CF544AF005A9AFC /* Exceptions for "CounterWidget" folder in "LiveActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CounterAppIntent.swift,
+			);
+			target = B45582A02CF53F0D006D3DFA /* LiveActivity */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B41B0CFE2CF54043005A9AFC /* CounterWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				B41B0D172CF544AF005A9AFC /* Exceptions for "CounterWidget" folder in "LiveActivity" target */,
 				B41B0D092CF54045005A9AFC /* Exceptions for "CounterWidget" folder in "CounterWidgetExtension" target */,
 			);
 			path = CounterWidget;
@@ -264,6 +272,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CounterWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterWidget;
@@ -292,6 +301,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CounterWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CounterWidget;
@@ -437,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivity/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
@@ -476,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivity/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
